@@ -26,17 +26,25 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	json.NewEncoder(w).Encode(map[string]interface{}{
-		"widgets": []map[string]interface{}{
-			{
+		"widgets": []interface{}{
+			map[string]interface{}{
+				"uiType": "UikIconButton",
+				"props": map[string]interface{}{
+					"icon":    "question_mark",
+					"tooltip": "About",
+					"action": map[string]interface{}{
+						"type":  "navigate",
+						"route": "/about",
+					},
+				},
+			},
+			map[string]interface{}{
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
 					"padding": 16,
-					"action": map[string]interface{}{
-						"type":  "navigate",
-						"route": "/profile",
-					},
-					"children": []map[string]interface{}{
-						{
+					"color":   "#A9BCD0",
+					"children": []interface{}{
+						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
 								"text":       "Welcome to Xdriven",
@@ -44,40 +52,66 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 								"fontWeight": "bold",
 							},
 						},
-						{
+						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "Build UI from server-side config",
+								"text":     "The screen you’re seeing right now is built entirely from backend JSON.",
 								"fontSize": 16,
-								"color":    "#666666",
+								"color":    "#333333",
+							},
+						},
+						map[string]interface{}{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":     "Not a single widget is hardcoded.",
+								"fontSize": 14,
+								"color":    "#333333",
 							},
 						},
 					},
 				},
 			},
-			{
+			map[string]interface{}{
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
-					"padding": 12,
-					"color":   "#F5F5F5",
-					"action": map[string]interface{}{
-						"type":  "navigate",
-						"route": "/profile",
-					},
-					"children": []map[string]interface{}{
-						{
+					"padding": 16,
+					"color":   "#D8DBE2",
+					"children": []interface{}{
+						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "Why Xdriven?",
-								"fontSize":   18,
-								"fontWeight": "bold",
+								"text":     "✅ No app store approvals",
+								"fontSize": 14,
 							},
 						},
-						{
+						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "No more app releases for layout updates.",
+								"text":     "✅ Layouts controlled from server",
 								"fontSize": 14,
+							},
+						},
+						map[string]interface{}{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":     "✅ New pages with zero redeploy",
+								"fontSize": 14,
+							},
+						},
+					},
+				},
+			},
+			map[string]interface{}{
+				"uiType": "UikContainer",
+				"props": map[string]interface{}{
+					"padding": 16,
+					"children": []interface{}{
+						map[string]interface{}{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":       "Just update JSON. Boom. UI changes instantly.",
+								"fontSize":   16,
+								"fontWeight": "bold",
 							},
 						},
 					},
