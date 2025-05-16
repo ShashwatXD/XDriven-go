@@ -26,6 +26,7 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	json.NewEncoder(w).Encode(map[string]interface{}{
+		"backgroundImage": "https://www.pinterest.com/ideas/gray-texture-background/901994140348/",
 		"widgets": []interface{}{
 			map[string]interface{}{
 				"uiType": "UikIconButton",
