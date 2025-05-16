@@ -31,6 +31,10 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
 					"padding": 16,
+					"action": map[string]interface{}{
+						"type":  "navigate",
+						"route": "/profile",
+					},
 					"children": []map[string]interface{}{
 						{
 							"uiType": "UikText",
@@ -56,6 +60,10 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 				"props": map[string]interface{}{
 					"padding": 12,
 					"color":   "#F5F5F5",
+					"action": map[string]interface{}{
+						"type":  "navigate",
+						"route": "/profile",
+					},
 					"children": []map[string]interface{}{
 						{
 							"uiType": "UikText",
