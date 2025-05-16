@@ -30,8 +30,9 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 			map[string]interface{}{
 				"uiType": "UikIconButton",
 				"props": map[string]interface{}{
-					"icon":    "question_mark",
-					"tooltip": "About",
+					"icon":    "help_outline",
+					"color":   "#5F7AFF",
+					"tooltip": "Learn more about Xdriven",
 					"action": map[string]interface{}{
 						"type":  "navigate",
 						"route": "/about",
@@ -41,70 +42,45 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 			map[string]interface{}{
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
-					"padding": 16,
-					"color":   "#A9BCD0",
+					"padding": 24,
+					"color":   "#5F7AFF",
 					"children": []interface{}{
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "🚀 Xdriven is Live",
-								"fontSize":   26,
+								"text":       "✨ Xdriven is Live",
+								"fontSize":   28,
 								"fontWeight": "bold",
-								"color":      "#222222",
+								"color":      "#FFFFFF",
 							},
 						},
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "This app is not built. It's configured.",
+								"text":     "Zero-code UI delivered instantly",
 								"fontSize": 18,
-								"color":    "#333333",
-							},
-						},
-						map[string]interface{}{
-							"uiType": "UikText",
-							"props": map[string]interface{}{
-								"text":     "What you're seeing is crafted entirely by backend JSON.",
-								"fontSize": 16,
-								"color":    "#333333",
+								"color":    "rgba(255,255,255,0.9)",
 							},
 						},
 					},
 				},
 			},
 			map[string]interface{}{
-				"uiType": "UikText",
-				"props": map[string]interface{}{
-					"text":     "\"This UI didn’t exist 5 seconds ago.\"",
-					"fontSize": 14,
-					"color":    "#555555",
-				},
-			},
-			map[string]interface{}{
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
-					"padding": 16,
-					"color":   "#D8DBE2",
+					"padding":      20,
+					"margin":       12,
+					"borderRadius": 12,
+					"color":        "#FFFFFF",
+					"shadow":       2,
 					"children": []interface{}{
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "✅ Ship UI without redeploys",
-								"fontSize": 16,
-							},
-						},
-						map[string]interface{}{
-							"uiType": "UikText",
-							"props": map[string]interface{}{
-								"text":     "✅ Add new screens with 0 code changes",
-								"fontSize": 16,
-							},
-						},
-						map[string]interface{}{
-							"uiType": "UikText",
-							"props": map[string]interface{}{
-								"text":     "✅ Control layout from backend in real-time",
-								"fontSize": 16,
+								"text":      "\"This entire interface was generated from backend JSON - no app update required\"",
+								"fontSize":  15,
+								"color":     "#666666",
+								"fontStyle": "italic",
 							},
 						},
 					},
@@ -113,8 +89,57 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 			map[string]interface{}{
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
-					"padding": 16,
-					"color":   "#F0F4F8",
+					"padding":      16,
+					"margin":       12,
+					"borderRadius": 12,
+					"color":        "#F8FAFF",
+					"children": []interface{}{
+						map[string]interface{}{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":         "🚀 Key Benefits",
+								"fontSize":     20,
+								"fontWeight":   "600",
+								"color":        "#5F7AFF",
+								"marginBottom": 12,
+							},
+						},
+						map[string]interface{}{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":         "• Instant UI updates without app releases",
+								"fontSize":     16,
+								"color":        "#444444",
+								"marginBottom": 8,
+							},
+						},
+						map[string]interface{}{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":         "• Dynamic layouts controlled from backend",
+								"fontSize":     16,
+								"color":        "#444444",
+								"marginBottom": 8,
+							},
+						},
+						map[string]interface{}{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":     "• A/B test interfaces in real-time",
+								"fontSize": 16,
+								"color":    "#444444",
+							},
+						},
+					},
+				},
+			},
+			map[string]interface{}{
+				"uiType": "UikContainer",
+				"props": map[string]interface{}{
+					"padding":      20,
+					"margin":       12,
+					"borderRadius": 12,
+					"color":        "#5F7AFF",
 					"action": map[string]interface{}{
 						"type":  "navigate",
 						"route": "/about",
@@ -123,17 +148,19 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "🎯 Want to know how it works?",
-								"fontSize":   16,
-								"fontWeight": "bold",
+								"text":         "👉 See How It Works",
+								"fontSize":     18,
+								"fontWeight":   "600",
+								"color":        "#FFFFFF",
+								"marginBottom": 8,
 							},
 						},
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "Tap anywhere on this block to dive into the magic of Xdriven.",
+								"text":     "Tap to explore the technology behind instant UI delivery",
 								"fontSize": 14,
-								"color":    "#333333",
+								"color":    "rgba(255,255,255,0.9)",
 							},
 						},
 					},
@@ -141,5 +168,4 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 			},
 		},
 	})
-
 }
