@@ -27,17 +27,7 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(map[string]interface{}{
 		"widgets": []interface{}{
-			map[string]interface{}{
-				"uiType": "UikIconButton",
-				"props": map[string]interface{}{
-					"icon":    "question_mark",
-					"tooltip": "About",
-					"action": map[string]interface{}{
-						"type":  "navigate",
-						"route": "/about",
-					},
-				},
-			},
+
 			map[string]interface{}{
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
@@ -47,7 +37,7 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "Welcome to Xdriven",
+								"text":       "Welcome to XDriven",
 								"fontSize":   24,
 								"fontWeight": "bold",
 							},
@@ -55,16 +45,17 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "The screen you’re seeing right now is built entirely from backend JSON.",
-								"fontSize": 16,
-								"color":    "#333333",
+								"text":       "The screen you’re seeing right now is built entirely from backend JSON.",
+								"fontSize":   18,
+								"fontWeight": "medium",
+								"color":      "#333333",
 							},
 						},
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
 								"text":     "Not a single widget is hardcoded.",
-								"fontSize": 14,
+								"fontSize": 16,
 								"color":    "#333333",
 							},
 						},
@@ -80,22 +71,25 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "✅ No app store approvals",
-								"fontSize": 14,
+								"text":       "✅ No app store approvals",
+								"fontSize":   18,
+								"fontWeight": "medium",
 							},
 						},
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "✅ Layouts controlled from server",
-								"fontSize": 14,
+								"text":       "✅ Layouts controlled from server",
+								"fontSize":   18,
+								"fontWeight": "medium",
 							},
 						},
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "✅ New pages with zero redeploy",
-								"fontSize": 14,
+								"text":       "✅ New pages with zero redeploy",
+								"fontSize":   18,
+								"fontWeight": "medium",
 							},
 						},
 					},
