@@ -33,7 +33,7 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
 					"padding": 24,
-					"color":   "#94A3B3",
+					"color":   "#A5AFB6",
 					"children": []interface{}{
 						map[string]interface{}{
 							"uiType": "UikText",
