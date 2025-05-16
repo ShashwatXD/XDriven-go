@@ -27,7 +27,17 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 
 	json.NewEncoder(w).Encode(map[string]interface{}{
 		"widgets": []interface{}{
-
+			map[string]interface{}{
+				"uiType": "UikIconButton",
+				"props": map[string]interface{}{
+					"icon":    "question_mark",
+					"tooltip": "About",
+					"action": map[string]interface{}{
+						"type":  "navigate",
+						"route": "/about",
+					},
+				},
+			},
 			map[string]interface{}{
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
@@ -37,29 +47,37 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "Welcome to XDriven",
-								"fontSize":   24,
+								"text":       "🚀 Xdriven is Live",
+								"fontSize":   26,
 								"fontWeight": "bold",
+								"color":      "#222222",
 							},
 						},
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "The screen you’re seeing right now is built entirely from backend JSON.",
-								"fontSize":   18,
-								"fontWeight": "medium",
-								"color":      "#333333",
+								"text":     "This app is not built. It's configured.",
+								"fontSize": 18,
+								"color":    "#333333",
 							},
 						},
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "Not a single widget is hardcoded.",
+								"text":     "What you're seeing is crafted entirely by backend JSON.",
 								"fontSize": 16,
 								"color":    "#333333",
 							},
 						},
 					},
+				},
+			},
+			map[string]interface{}{
+				"uiType": "UikText",
+				"props": map[string]interface{}{
+					"text":     "\"This UI didn’t exist 5 seconds ago.\"",
+					"fontSize": 14,
+					"color":    "#555555",
 				},
 			},
 			map[string]interface{}{
@@ -71,25 +89,22 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "✅ No app store approvals",
-								"fontSize":   18,
-								"fontWeight": "medium",
+								"text":     "✅ Ship UI without redeploys",
+								"fontSize": 16,
 							},
 						},
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "✅ Layouts controlled from server",
-								"fontSize":   18,
-								"fontWeight": "medium",
+								"text":     "✅ Add new screens with 0 code changes",
+								"fontSize": 16,
 							},
 						},
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "✅ New pages with zero redeploy",
-								"fontSize":   18,
-								"fontWeight": "medium",
+								"text":     "✅ Control layout from backend in real-time",
+								"fontSize": 16,
 							},
 						},
 					},
@@ -99,13 +114,26 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
 					"padding": 16,
+					"color":   "#F0F4F8",
+					"action": map[string]interface{}{
+						"type":  "navigate",
+						"route": "/about",
+					},
 					"children": []interface{}{
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "Just update JSON. Boom. UI changes instantly.",
+								"text":       "🎯 Want to know how it works?",
 								"fontSize":   16,
 								"fontWeight": "bold",
+							},
+						},
+						map[string]interface{}{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":     "Tap anywhere on this block to dive into the magic of Xdriven.",
+								"fontSize": 14,
+								"color":    "#333333",
 							},
 						},
 					},
