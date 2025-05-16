@@ -26,8 +26,21 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	json.NewEncoder(w).Encode(map[string]interface{}{
-		"widgets": []map[string]string{
-			{"uiType": "UikText", "text": "Hello from backend!"},
+		"widgets": []map[string]interface{}{
+			{
+				"uiType": "UikText",
+				"props": map[string]interface{}{
+					"text":       "Hello from backend!",
+					"fontSize":   20,
+					"color":      "#FF5733",
+					"fontWeight": "bold",
+					"action": map[string]interface{}{
+						"type":   "navigate",
+						"target": "/second",
+					},
+				},
+			},
 		},
 	})
+
 }
