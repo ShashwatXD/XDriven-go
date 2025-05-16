@@ -26,20 +26,9 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	json.NewEncoder(w).Encode(map[string]interface{}{
-		"backgroundImage": "https://www.pinterest.com/ideas/gray-texture-background/901994140348/",
+		"backgroundImage": "https://i.pinimg.com/736x/8f/a7/0c/8fa70cf4d9c501f6e37cbb3b4a20f658.jpg",
 		"widgets": []interface{}{
-			map[string]interface{}{
-				"uiType": "UikIconButton",
-				"props": map[string]interface{}{
-					"icon":    "info",
-					"color":   "#5C6B73",
-					"tooltip": "About Xdriven",
-					"action": map[string]interface{}{
-						"type":  "navigate",
-						"route": "/about",
-					},
-				},
-			},
+
 			map[string]interface{}{
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
@@ -49,7 +38,7 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "🌌 Xdriven is Live",
+								"text":       "🌌 XDriven is Live!",
 								"fontSize":   28,
 								"fontWeight": "bold",
 								"color":      "#FFFFFF",
@@ -58,8 +47,8 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":     "Your UI, dynamically configured",
-								"fontSize": 18,
+								"text":     "Your UI, dynamically configured!",
+								"fontSize": 20,
 								"color":    "rgba(255,255,255,0.85)",
 							},
 						},
