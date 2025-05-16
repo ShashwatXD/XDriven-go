@@ -33,12 +33,12 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 				"uiType": "UikContainer",
 				"props": map[string]interface{}{
 					"padding": 24,
-					"color":   "#5C6B73",
+					"color":   "#94A3B3",
 					"children": []interface{}{
 						map[string]interface{}{
 							"uiType": "UikText",
 							"props": map[string]interface{}{
-								"text":       "🌌 XDriven is Live!",
+								"text":       "XDriven is Live!",
 								"fontSize":   28,
 								"fontWeight": "bold",
 								"color":      "#FFFFFF",
