@@ -28,20 +28,51 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]interface{}{
 		"widgets": []map[string]interface{}{
 			{
-				"uiType": "UikText",
+				"uiType": "UikContainer",
 				"props": map[string]interface{}{
-					"text":       "Welcome to Xdriven",
-					"fontSize":   18,
-					"color":      "#333333",
-					"fontWeight": "bold",
+					"padding": 16,
+					"children": []map[string]interface{}{
+						{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":       "Welcome to Xdriven",
+								"fontSize":   24,
+								"fontWeight": "bold",
+							},
+						},
+						{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":     "Build UI from server-side config",
+								"fontSize": 16,
+								"color":    "#666666",
+							},
+						},
+					},
 				},
 			},
 			{
-				"uiType": "UikText",
+				"uiType": "UikContainer",
 				"props": map[string]interface{}{
-					"text":     "Another text below",
-					"fontSize": 14,
-					"color":    "#777777",
+					"padding": 12,
+					"color":   "#F5F5F5",
+					"children": []map[string]interface{}{
+						{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":       "Why Xdriven?",
+								"fontSize":   18,
+								"fontWeight": "bold",
+							},
+						},
+						{
+							"uiType": "UikText",
+							"props": map[string]interface{}{
+								"text":     "No more app releases for layout updates.",
+								"fontSize": 14,
+							},
+						},
+					},
 				},
 			},
 		},
