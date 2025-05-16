@@ -30,14 +30,18 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 			{
 				"uiType": "UikText",
 				"props": map[string]interface{}{
-					"text":       "Hello from backend!",
-					"fontSize":   20,
-					"color":      "#FF5733",
+					"text":       "Welcome to Xdriven",
+					"fontSize":   18,
+					"color":      "#333333",
 					"fontWeight": "bold",
-					"action": map[string]interface{}{
-						"type":   "navigate",
-						"target": "/second",
-					},
+				},
+			},
+			{
+				"uiType": "UikText",
+				"props": map[string]interface{}{
+					"text":     "Another text below",
+					"fontSize": 14,
+					"color":    "#777777",
 				},
 			},
 		},
