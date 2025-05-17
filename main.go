@@ -28,6 +28,19 @@ func handleHome(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]interface{}{
 		"backgroundImage": "https://i.pinimg.com/736x/8f/a7/0c/8fa70cf4d9c501f6e37cbb3b4a20f658.jpg",
 		"widgets": []interface{}{
+			map[string]interface{}{
+
+				"uiType": "UikIconButton",
+				"props": map[string]interface{}{
+					"icon":      "question_mark",
+					"tooltip":   "About",
+					"alignment": "topRight",
+					"action": map[string]interface{}{
+						"type":  "navigate",
+						"route": "/about",
+					},
+				},
+			},
 
 			map[string]interface{}{
 				"uiType": "UikContainer",
